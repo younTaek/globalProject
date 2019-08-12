@@ -1,0 +1,348 @@
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+body{line-height:1}
+ol,ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}
+table{border-collapse:collapse;border-spacing:0}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.container {
+    width: 95%;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* gameBoy 전체 container */
+.gBoyContainer {
+    position: absolute;
+    width: 67%;
+    height: 57%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.gBoyContainer>.gBoyDivBody {
+    position: relative;
+    height: 100%;
+}
+
+.gBoyDivBody>.gBoyBodyTitle,
+.gBoyDivBody>.gBoyBodyBottom {
+    position: absolute !important;
+    height: 5%;
+    border-radius: 3px;
+    z-index: 99;
+}
+
+.gBoyDivBody>.gBoyBodyLeft,
+.gBoyDivBody>.gBoyBodyRight {
+    height: 95%;
+    -ms-flex: 0 0 3.333333% !important;
+    flex: 0 0 3.333333% !important;
+    max-width: 3.333333% !important;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 5px;
+    background: linear-gradient(to right, #303437, #2f3336, #36373b);
+}
+
+.gBoyDivBody>.gBoyBody {
+        position: relative;
+    height: 90%;
+    -ms-flex: 0 0 93.333333% !important;
+    flex: 0 0 93.333333% !important;
+    max-width: 93.333333% !important;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 8px;
+    background-color: #000000;
+    z-index: 98;
+}
+
+.gBoyBodyTitle {
+    top: 7px;
+    right: 0;
+    left: 0;
+    background: linear-gradient(to bottom, #4d5255, #676e74, #323639);
+}
+
+.gBoyBodyBottom {
+    right: 0;
+    left: 0;
+    bottom: 5px;
+    background: linear-gradient(to bottom, #2c3033, #404145, #27282c, #1f2024, #303437);
+}
+
+
+.gBoyContainer>.gBoyRightController {
+    position: relative;
+    background: linear-gradient(135deg, #f57665, #ff5d50, #db2521);
+    border-radius: 5px;
+}
+
+.gBoyContainer>.gBoyLeftController {
+    position: relative;
+    background: linear-gradient(45deg, #03b7dc, #02bfdf, #66d5f0);
+    border-radius: 5px;
+}
+
+
+.conDiv {
+    position: absolute;
+    width: 100%;
+    height: 40%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+
+.gBoyLeftController .conShadow,
+.gBoyRightController .conShadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 99%;
+    height: 100%;
+    text-align: center;
+}
+
+.gBoyLeftController .gBoyLeftConShadow {
+    border-top: 10px solid rgba(51, 211, 237, 1);
+    border-radius: 5px;
+}
+
+.gBoyRightController .gBoyRightConShadow {
+    border-top: 10px solid rgba(255, 142, 133, 1);
+    border-radius: 5px;
+}
+
+.leftConbtn,
+.rightConbtn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(#635d69, #4e5158, #3d4144, #313e46);
+    color: white;
+    border-radius: 30px;
+    font-size: 18px;
+    border: 3px solid #22090c;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+#leftConBtnUp,
+#rightConBtnUp {
+    top: 10%;
+    right: initial;
+    bottom: initial;
+    left: 40%;
+}
+
+#leftConBtnRight,
+#rightConBtnRight {
+    top: 40%;
+    right: 15%;
+    bottom: initial;
+    left: initial;
+}
+
+#leftConBtnBottom,
+#rightConBtnBottom {
+    top: initial;
+    right: initial;
+    bottom: 10%;
+    left: 40%;
+
+}
+
+#leftConBtnLeft,
+#rightConBtnLeft {
+
+    top: 40%;
+    right: initial;
+    bottom: initial;
+    left: 15%;
+
+}
+
+.active {
+    position: relative;
+    top: -2px !important;
+    transform: scale(.9);
+}
+
+.gBoyLeftConShadow .leftConbtn :active,
+.gBoyRightConShadow .rightConbtn :active {
+    position: relative;
+    top: -2px;
+    transform: scale(.9);
+}
+
+.leftConbtnShodow,
+.rightConbtnShodow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 95%;
+    height: 95%;
+    border-radius: 30px;
+    border-top: 1px solid #7d8987;
+    background-color: transparent;
+
+}
+
+.leftConbtnPosition,
+.rightConbtnPosition {
+    position: absolute;
+    left: 20%;
+    bottom: 25%;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(#635d69, #4e5158, #3d4144, #313e46);
+    /* background-color: #3a3e47; */
+    color: white;
+    border-radius: 50px;
+    font-size: 18px;
+    border: 3px solid #22090c;
+    line-height: 1.8;
+    cursor: pointer;
+}
+
+.gBoyBodyContent{
+    height: 100%;
+}
+@media (max-width: 575.98px) {
+    .gBoyContainer {
+        display: none;
+    }
+
+    .onBtnFull {
+        display: none;
+    }
+
+    .gBoySpanContent {
+        display: block;
+    }
+
+    
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .gBoySpanContent {
+        display: none;
+    }
+
+    .gBoyContainer {
+        display: flex;
+        width: 95%;
+        height: 85%;
+        margin: auto;
+    }
+
+    .gBoyLeftController,
+    .gBoyRightController {
+        -ms-flex: 0 0 18.666667%;
+        flex: 0 0 18.666667%;
+        max-width: 18.666667%;
+    }
+
+    .gBoyDivBody {
+        -ms-flex: 0 0 62.666667%;
+        flex: 0 0 62.666667%;
+        max-width: 62.666667%;
+    }
+
+    .conDiv {
+        height: 50%;
+    }
+
+    .leftConbtn,
+    .rightConbtn {
+        width: 35px;
+        height: 35px;
+    }
+
+    #leftConBtnUp,
+    #rightConBtnUp {
+        top: 10%;
+        right: initial;
+        bottom: initial;
+        left: 35%;
+    }
+
+    #leftConBtnRight,
+    #rightConBtnRight {
+        top: 40%;
+        right: 10%;
+        bottom: initial;
+        left: initial;
+    }
+
+    #leftConBtnBottom,
+    #rightConBtnBottom {
+        top: initial;
+        right: initial;
+        bottom: 10%;
+        left: 35%;
+
+    }
+
+    #leftConBtnLeft,
+    #rightConBtnLeft {
+
+        top: 40%;
+        right: initial;
+        bottom: initial;
+        left: 10%;
+
+    }
+
+
+
+    #canvas{
+        position: absolute;
+        width: 100%;
+        height: 100%;;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {}
+
+@media (min-width: 1200px) {
+    .onBtnFull {
+        display: none;
+    }
+
+    .gBoySpanContent {
+        display: none;
+    }
+}
